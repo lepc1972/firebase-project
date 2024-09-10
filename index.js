@@ -16,18 +16,18 @@ const appSettings = {
 
 const app = initializeApp(appSettings)
 const database = getDatabase(app);
-const moviesInDB = ref(database, "a little bit of everything");
-console.log(database)
-
-console.log(app)
-
+const shoppingListInDB = ref(database, "a little bit of everything");
 const inputFieldEl = document.getElementById('input-field');
 const addButtonEl = document.getElementById('add-button');
+const shoppingListEl = document.getElementById('shopping-list');
 
 addButtonEl.addEventListener("click", function() {
         let inputValue = inputFieldEl.value
-        push(moviesInDB, inputValue)
-        console.log(inputValue)
+        push(shoppingListInDB, inputValue)
+        shoppingListEl.innerHTML += `<li>${inputValue}</li>`
+        // clear inputfield when button is pressed
+        inputFieldEl.value = ""
+
 
 }
 
