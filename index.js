@@ -24,12 +24,20 @@ const shoppingListEl = document.getElementById('shopping-list');
 addButtonEl.addEventListener("click", function() {
         let inputValue = inputFieldEl.value
         push(shoppingListInDB, inputValue)
-        shoppingListEl.innerHTML += `<li>${inputValue}</li>`
+        
         // clear inputfield when button is pressed
-        inputFieldEl.value = ""
+        clearInputFieldEl()
+        // clear input field after logging
+        appendItemToShoppingListEl(inputValue)
 
 
 }
 
 )
+function clearInputFieldEl() {
+        inputFieldEl.value = "";
+}
+function appendItemToShoppingListEl(itemValue) {
+       shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+}
 
