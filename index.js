@@ -39,5 +39,7 @@ function clearInputFieldEl() {
 }
 function appendItemToShoppingListEl(itemValue) {
        shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+       console.log(itemValue)
+       // clear input field after logging
 }
 
