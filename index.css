@@ -70,3 +70,9 @@ button:hover {
         font-size: 18px;
     }
 }
+li {
+    display: inline-block; /* Esto hace que los elementos se comporten como cajas en línea */
+    border: 1px solid #ccc; /* Añade un borde a cada caja */
+    padding: 10px; /* Añade espacio interno a cada caja */
+    margin: 5px; /* Añade espacio externo (margen) entre las cajas */
+}
