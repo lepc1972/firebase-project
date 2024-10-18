@@ -1,2 +1,2 @@
 FIREBASE PROJECT
-test
+tests
