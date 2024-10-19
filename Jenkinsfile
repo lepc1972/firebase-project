@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        githubPush()  // Configura el trigger para escuchar eventos de push de GitHub
+    }
+
     stages {
         stage('Build') {
             steps {
